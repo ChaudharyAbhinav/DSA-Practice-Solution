@@ -5,7 +5,9 @@ public class PowerLinear {
         if(a==0 || b==0){
             return 1;
         }
-        int ans = (int) Math.pow(a,b);
+        int powerCoefficient = PL(a, b-1);
+        int ans = a * powerCoefficient;
+        return ans;
     }
 
     public static void main(String[] args) {
@@ -13,6 +15,7 @@ public class PowerLinear {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         int b = sc.nextInt();
-        PL(a, b);
+
+        System.out.println( PL(a, b));
     }
 }
